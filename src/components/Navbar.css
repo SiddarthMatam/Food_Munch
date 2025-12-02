@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #dd2476;   /* Different color for navbar */
+  padding: 15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  gap: 30px;
+}
+
+.navbar ul li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

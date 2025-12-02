@@ -1,0 +1,31 @@
+.menu-page {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #dd2476;
+  font-weight: bold;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

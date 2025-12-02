@@ -1,0 +1,98 @@
+.cart-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.cart-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #dd2476;
+  font-size: 32px;
+}
+
+/* ✅ EACH CART ITEM */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ✅ QUANTITY BUTTONS */
+.cart-item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item button {
+  background: #dd2476;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item button:hover {
+  background: #b91d5b;
+}
+
+/* ✅ REMOVE BUTTON */
+.cart-item .remove-btn {
+  background: #444;
+}
+
+.cart-item .remove-btn:hover {
+  background: #000;
+}
+
+/* ✅ TOTAL SECTION */
+.cart-page h3 {
+  text-align: right;
+  margin-top: 25px;
+  font-size: 24px;
+  color: #222;
+}
+
+/* ✅ EMPTY CART */
+.cart-empty {
+  text-align: center;
+  font-size: 22px;
+  padding: 80px 20px;
+  color: #777;
+}
+
+/* ✅ RESPONSIVE (MOBILE) */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cart-page h3 {
+    text-align: left;
+  }
+}
+
