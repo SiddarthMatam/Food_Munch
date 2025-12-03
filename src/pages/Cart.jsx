@@ -15,9 +15,8 @@ function Cart({cartItems, removeFromCart, increaseQty, decreaseQty }) {
     <div className="cart-page">
       <h2>Your Cart</h2>
 
-      {cartItems.map((item) => (
+      {cartItems.map(item => (
         <div key={item.id} className="cart-item">
-          {/* <img src={item.image} className="cart-image"  alt="image"/> */}
           <h4>{item.name}</h4>
           <p>₹{item.price}</p>
           <div>
@@ -26,7 +25,7 @@ function Cart({cartItems, removeFromCart, increaseQty, decreaseQty }) {
             <button className="btn incr-btn" onClick={() => increaseQty(item.id)}>+</button>
           </div>
 
-          <button classNam="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
+          <button className="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
         </div>
       ))}
 
