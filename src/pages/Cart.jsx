@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Cart.css"
 
-function Cart({ cartItems, removeFromCart, increaseQty, decreaseQty }) {
+function Cart({cartItems, removeFromCart, increaseQty, decreaseQty }) {
   let total = 0
   for (let item of cartItems) {
     total = total + item.price * item.qty
@@ -17,12 +17,13 @@ function Cart({ cartItems, removeFromCart, increaseQty, decreaseQty }) {
 
       {cartItems.map((item) => (
         <div key={item.id} className="cart-item">
+          {/* <img src={item.image} className="cart-image"  alt="image"/> */}
           <h4>{item.name}</h4>
           <p>₹{item.price}</p>
           <div>
-            <button onClick={() => decreaseQty(item.id)}>-</button>
+            <button className="btn desc-btn" disabled={item.qty === 1} onClick={() => decreaseQty(item.id)}>-</button>
             <span>{item.qty}</span>
-            <button onClick={() => increaseQty(item.id)}>+</button>
+            <button className="btn incr-btn" onClick={() => increaseQty(item.id)}>+</button>
           </div>
 
           <button classNam="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>

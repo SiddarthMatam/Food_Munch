@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Menu → FoodCart → addToCart → App.jsx → cartItems state  
+# cartItems → Navbar → cart count  
+# cartItems → Cart → Quantity control + Total
