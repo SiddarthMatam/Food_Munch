@@ -1,4 +1,3 @@
-import React from 'react'
 import FoodCart from '../components/FoodCart'
 import cart from '../assets/cart-logo.png'
 import "./Menu.css"
@@ -43,7 +42,6 @@ function Menu({addToCart}) {
   return (
     <div className="menu-page">
       <h1 className="menu-title">Our Menu</h1>
-
       <div className="menu-grid">
         {foodItems.map(item => (
             <div className="menu-card">

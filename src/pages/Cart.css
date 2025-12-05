@@ -14,7 +14,6 @@
   font-size: 32px;
 }
 
-/* ✅ EACH CART ITEM */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -37,7 +36,6 @@
   color: #333;
 }
 
-/* ✅ QUANTITY BUTTONS */
 .cart-item div {
   display: flex;
   align-items: center;
@@ -58,7 +56,7 @@
   background: #b91d5b;
 }
 
-/* ✅ REMOVE BUTTON */
+
 .cart-item .remove-btn {
   background: #444;
 }
@@ -67,7 +65,6 @@
   background: #000;
 }
 
-/* ✅ TOTAL SECTION */
 .cart-page h3 {
   text-align: right;
   margin-top: 25px;
@@ -75,7 +72,6 @@
   color: #222;
 }
 
-/* ✅ EMPTY CART */
 .cart-empty {
   text-align: center;
   font-size: 22px;
@@ -83,7 +79,6 @@
   color: #777;
 }
 
-/* ✅ RESPONSIVE (MOBILE) */
 @media (max-width: 600px) {
   .cart-item {
     flex-direction: column;
@@ -95,7 +90,6 @@
     text-align: left;
   }
 }
-
 
 .desc-btn:disabled{
   cursor:not-allowed;
