@@ -1,4 +1,3 @@
-import React from 'react'
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
 
@@ -7,10 +6,10 @@ function Navbar({cartItems}) {
     <>
     <div className="navbar">
         <ul>
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/about"><li>About</li></Link>
-            <Link to="/menu"><li>Menu</li></Link>
-            <Link to="/cart"><li>Cart({cartItems.length})</li></Link>
+            <Link to="/" className='link'><li>Home</li></Link>
+            <Link to="/about" className='link'><li>About</li></Link>
+            <Link to="/menu" className='link'><li>Menu</li></Link>
+            <Link to="/cart" className='link'><li>Cart({cartItems.length})</li></Link>
         </ul>
     </div>
     </>
@@ -18,3 +17,4 @@ function Navbar({cartItems}) {
 }
 
 export default Navbar
+

@@ -19,24 +19,24 @@ function App() {
         );
       }
       return [...prev, {...item, qty:1}];
-  });
+    });
   };
 
   const removeFromCart = (id) => {
-    setCartItems(prev => prev.filter((i) => i.id !== id));
+    setCartItems(prev => prev.filter(i => i.id !== id));
   };
 
   const increaseQty = (id) => {
-    setCartItems((prev) =>
-      prev.map((i) =>
+    setCartItems(prev =>
+      prev.map(i =>
         i.id === id ? { ...i, qty: i.qty + 1 } : i
       )
     );
   };
 
   const decreaseQty = (id) => {
-    setCartItems((prev) =>
-      prev.map((i) =>
+    setCartItems(prev =>
+      prev.map(i =>
         i.id === id && i.qty > 1 ? { ...i, qty: i.qty - 1 } : i
       )
     );

@@ -1,7 +1,6 @@
-import React from 'react'
 import "./FoodCart.css"
 
-function FoodCart({ id, name, price, image, desc, type, addToCart, cartImage}) {
+function FoodCart({id, name, price, image, desc, type, addToCart, cartImage}) {
 
   return (
     <div className="food-container">

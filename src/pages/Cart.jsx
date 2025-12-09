@@ -34,3 +34,23 @@ function Cart({cartItems, removeFromCart, increaseQty, decreaseQty }) {
 }
 
 export default Cart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export default function Cart({ cartItems, updateQuantity, removeFromCart }) {
+//   const total = cartItems.reduce((sum, item) => {
+//     const price = parseInt(item.price.replace('rs', ''))
+//     return sum + (price * item.quantity)
+//   }, 0)
