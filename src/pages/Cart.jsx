@@ -1,13 +1,13 @@
 import "./Cart.css"
 
-function Cart({cartItems, removeFromCart, increaseQty, decreaseQty }) {
+function Cart({ cartItems, removeFromCart, increaseQty, decreaseQty }) {
   let total = 0
   for (let item of cartItems) {
     total = total + item.price * item.qty
   }
 
   if (cartItems.length === 0) {
-    return <h2 className="cart-empty">Your Cart is Empty 🛒</h2>
+    return (<h2 className="cart-empty">Your Cart is Empty 🛒</h2>)
   }
 
   return (

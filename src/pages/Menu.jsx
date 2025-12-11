@@ -1,9 +1,9 @@
-import FoodCart from '../components/FoodCart'
+// import FoodCart from '../components/FoodCart'
 import cart from '../assets/cart-logo.png'
 import "./Menu.css"
 
 
-function Menu({addToCart}) {
+function Menu({ addToCart }) {
   const foodItems = [
     {
       id: 1,
@@ -38,24 +38,28 @@ function Menu({addToCart}) {
       desc: "Crispy chicken tossed in spicy Indo-chinese sauce."
     }
   ]
-  
+
   return (
     <div className="menu-page">
       <h1 className="menu-title">Our Menu</h1>
       <div className="menu-grid">
         {foodItems.map(item => (
-            <div className="menu-card">
-          <FoodCart
-            key={item.id}
-            id={item.id}
-            type={item.type}
-            name={item.name}
-            price={item.price}
-            image={item.image}
-            cartImage={cart}
-            addToCart={addToCart}
-            desc={item.desc}
-          />
+          <div className="menu-card" key={item.id}>
+            <div className="food-container">
+              <div className="food-card">
+                <img src={item.image} alt="food-item" className="food-image" /><br />
+                <h3 className="food-name">{item.name}</h3>
+                <p className="food-desc">{item.desc}</p>
+                <p>{item.type === "veg" ? "🟢 Veg" : "🔴 Non-Veg"}</p>
+                <div className="food-footer">
+                  <span className="food-price">₹{item.price}</span>
+                  <div className="cart-action">
+                    <img onClick={() => addToCart({ id: item.id, name: item.name, price: item.price, image: item.image })} src={cart} alt="cart" className="cart-image" />
+                    <button className="cart-button" onClick={() => addToCart({ id: item.id, name: item.name, price: item.price, image: item.image })}>Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
