@@ -2,8 +2,12 @@ import "./Cart.css"
 
 function Cart({ cartItems, removeFromCart, increaseQty, decreaseQty }) {
   let total = 0
-  for (let item of cartItems) {
-    total = total + item.price * item.qty
+  // for (let item of cartItems) {
+  //   total = total + item.price * item.qty
+  // }
+
+  for (const i of cartItems){
+    total = total + i.price*i.qty
   }
 
   if (cartItems.length === 0) {
