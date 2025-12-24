@@ -18,6 +18,7 @@ function App() {
           i.id === item.id ? {...i, qty:i.qty+1} : i
         );
       }
+      console.log(item);
       return [...prev, {...item, qty:1}];
     });
   };
